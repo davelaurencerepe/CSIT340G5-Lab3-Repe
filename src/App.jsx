@@ -38,27 +38,29 @@ const Footer = (props) => {
 }
 
 const App = () => {
-  const course = 'Web Systems and Technologies'
-  const parts = [
-    {
-      name: 'Data Structures and Algorithms',
-      exercises: 3
-    },
-    {
-      name: 'Object-Oriented Programming',
-      exercises: 3
-    },
-    {
-      name: 'Discrete Mathematics',
-      exercises: 3
-    }
-  ]
+  const course = {
+    name: 'Web Systems and Technologies',
+    parts: [
+      {
+        name: 'Data Structures and Algorithms',
+        exercises: 3
+      },
+      {
+        name: 'Object-Oriented Programming',
+        exercises: 3
+      },
+      {
+        name: 'Discrete Mathematics',
+        exercises: 3
+      }
+    ]
+  }
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer fullName='Dave Laurence R. Repe' courseCode='CSIT340' section='G5' />
     </div>
   )
